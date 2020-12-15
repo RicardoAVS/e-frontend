@@ -13,6 +13,11 @@ body {
     url("./fonts/BookerlyDisplay_It.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "BookerlyDisplay";
+  src: local("BookerlyLCD"),
+    url("./fonts/BookerlyDisplay_Rg.ttf") format("truetype");
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
