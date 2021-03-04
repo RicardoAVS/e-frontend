@@ -7,6 +7,8 @@ import {
   signInFailure,
   signOutSuccess,
   signOutFailure,
+  signUpSuccess,
+  signUpFailure,
 } from "./user.actions";
 
 import {
@@ -72,7 +74,7 @@ export function* signUp({ payload: { email, password, displayName } }) {
     const { user } = yield auth.createUserWithEmailAndPassword(email, password);
     yield put(signUpSuccess({ user, additionalData: { displayName } }));
   } catch (error) {
-    yield signInFailure(error);
+    yield signUpFailure(error);
   }
 }
 
